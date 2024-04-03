@@ -12,6 +12,10 @@ function App() {
       <div className="p-4 h-screen flex items-center justify-center">
         <BrowserRouter>
           <Routes>
+          <Route
+              path="/"
+              element={<Login />}
+            />
             <Route
               path="/login"
               element={<Login />}

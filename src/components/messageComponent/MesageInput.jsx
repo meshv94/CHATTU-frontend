@@ -17,7 +17,7 @@ export const MesageInput = () => {
   const sendMessage = async (text) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/messages/send/${selectedConversation._id}`,
+        `https://chattu-server.onrender.com/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {

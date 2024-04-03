@@ -16,7 +16,7 @@ export const Register = () => {
     setIsLoading(true);
     // console.log(data);
     try {
-      let result = await fetch("http://localhost:5000/api/auth/register", {
+      let result = await fetch("https://chattu-server.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

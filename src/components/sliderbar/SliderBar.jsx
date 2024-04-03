@@ -10,7 +10,7 @@ export const SliderBar = () => {
   const getData = async () => {
     // console.log("token", { jwt: localStorage.getItem("jwt") });
     try {
-      let data = await fetch("http://localhost:5000/api/users", {
+      let data = await fetch("https://chattu-server.onrender.com/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

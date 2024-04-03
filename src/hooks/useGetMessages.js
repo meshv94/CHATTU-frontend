@@ -9,7 +9,7 @@ const useGetMessages = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:5000/api/messages/${selectedConversation?._id}`,
+        `https://chattu-server.onrender.com/api/messages/${selectedConversation?._id}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
