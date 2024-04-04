@@ -28,7 +28,6 @@ export const SliderBar = () => {
         navigate("/login");
       }
     } catch (error) {
-      alert("you are not loggedin");
       navigate("/login");
     }
   };

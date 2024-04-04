@@ -18,7 +18,7 @@ const useGetMessages = () => {
       );
       if (res.ok) {
         const data = await res.json();
-        console.log("response data", data);
+        // console.log("response data", data);
         setMessages(data);
       }
     } catch (error) {

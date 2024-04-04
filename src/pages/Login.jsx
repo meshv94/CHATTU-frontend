@@ -28,6 +28,7 @@ export const Login = () => {
         localStorage.setItem("jwt", result.jwt);
         localStorage.setItem("user", JSON.stringify(result.user));
         navigate("/home");
+        window.location.reload(true);
       } else {
         alert(result.msg || result.issues[0].message);
       }
