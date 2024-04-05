@@ -30,6 +30,7 @@ export const Login = () => {
         navigate("/home");
         window.location.reload(true);
       } else {
+        result = await result.json();
         alert(result.msg || result.issues[0].message);
       }
       setIsLoading(false);
