@@ -12,25 +12,6 @@ export const SocketContextProvider = ({ children }) => {
   const [onlineuser, setOnlineuser] = useState([]);
   const user = JSON.parse(localStorage.getItem("user")) || null;
 
-  // useEffect(() => {
-  //   if (user) {
-  //     const socket = io("https://chattu-server.onrender.com/", {
-  //       query: { userId: user._id },
-  //     });
-
-  //     setSocket(socket);
-  //     socket.on("getOnlineUsers", (users) => {
-  //       setOnlineuser(users);
-  //     });
-  //     return () => socket.close();
-  //   } else {
-  //     if (socket) {
-  //       socket.close();
-  //       setSocket(null);
-  //     }
-  //   }
-  // }, []);
-
   const connectSocket = (user) => {
     const socket = new io("https://chattu-server.onrender.com", {
       query: {

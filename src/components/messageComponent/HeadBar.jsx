@@ -16,7 +16,7 @@ export const HeadBar = (selectedConversation) => {
             {selectedConversation.user.username}
           </p>
         </div>
-        <div className="flex-none gap-2">
+        {/* <div className="flex-none gap-2">
           <div className="form-control">
             <input
               type="text"
@@ -24,7 +24,7 @@ export const HeadBar = (selectedConversation) => {
               className="input input-bordered w-24 md:w-60"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

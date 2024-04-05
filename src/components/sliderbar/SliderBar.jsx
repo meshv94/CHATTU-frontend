@@ -44,18 +44,17 @@ export const SliderBar = () => {
   }, []);
   return (
     <>
-      <div className="drawer lg:drawer-open">
+      <div className="drawer lg:drawer-open w-full lg:w-fit bg-base-100 h-fit">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
+        <div className="drawer-content flex flex-col z-20 navbar">
           {/* Page content here */}
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-active drawer-button lg:hidden w-1/5 h-svh rounded-none place-self-start fixed top-0 left-0 bg-base-100"
+            className="btn btn-active drawer-button lg:hidden rounded-none place-self-end bg-base-100"
           >
             <img
               src="https://cdn-icons-png.flaticon.com/128/10890/10890008.png"
-              width={20}
-              height={10}
+              width={30}
             />
           </label>
         </div>

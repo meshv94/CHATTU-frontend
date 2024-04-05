@@ -15,7 +15,7 @@ export const Messages = (selectedConversation) => {
   }, [messages]);
   return (
     <>
-      <div className="overflow-auto my-14 h-svh">
+      <div className="overflow-auto mb-20 mt-2 px-2">
         {!loading &&
           messages.length > 0 &&
           messages.map((item) => {            

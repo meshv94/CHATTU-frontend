@@ -42,7 +42,7 @@ export const MesageInput = () => {
   };
   return (
     <>
-      <div className="z-10 w-full mb-2">
+      <div className="z-10 w-full lg:w-4/5 mb-1 fixed bottom-0 right-0">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -53,7 +53,7 @@ export const MesageInput = () => {
           />
           <button
             type="submit"
-            className="btn btn-outline btn-info w-1/5 rounded-none"
+            className="btn btn-info w-1/5 rounded-none"
           >
             Send
           </button>

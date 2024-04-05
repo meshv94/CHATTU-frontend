@@ -16,7 +16,7 @@ function App() {
   const [user, setuser] = useState(localStorage.getItem("user") || null);
   return (
     <>
-      <div className="p-4 h-screen flex items-center justify-center">
+      <div className=" flex justify-center align-middle items-center h-screen ">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={user ? <Home /> : <Login />} />
