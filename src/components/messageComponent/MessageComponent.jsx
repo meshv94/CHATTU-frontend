@@ -14,7 +14,7 @@ export const MessageComponent = () => {
   return (
     <>
       {selectedConversation ? (
-        <div className="flex flex-col h-screen align-middle">
+        <div className="flex flex-col h-svh align-middle">
           <HeadBar user={selectedConversation} />
           <Messages />
           <MesageInput />
