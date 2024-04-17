@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { User } from "./User";
+import { toast } from 'react-toastify';
 
 export const SliderBar = () => {
   const [data, setData] = useState([]);
@@ -36,7 +37,10 @@ export const SliderBar = () => {
     localStorage.removeItem("jwt");
     localStorage.removeItem("user");
     navigate("/login");
-    window.location.reload(true);
+    toast.success("logout success")
+    setTimeout( ()=>{
+      window.location.reload(true);
+    }, 2000)
   };
 
   useEffect(() => {

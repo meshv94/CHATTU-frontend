@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -27,12 +28,12 @@ export const Register = () => {
       if (result.ok) {
         result = await result.json();
         // console.log("OK", result);
-        alert(result.msg);
+        toast.success(result.msg);
         navigate("/login");
       } else {
         result = await result.json();
         // console.log("NOT OK" , result)
-        alert(result.msg || result.issues[0].message);
+        toast.info(result.msg || result.issues[0].message);
       }
       setData({
         username: "",
@@ -43,6 +44,7 @@ export const Register = () => {
       setIsLoading(false);
     } catch (error) {
       console.log("error", error);
+      toast,error(error)
     }
   };
 
