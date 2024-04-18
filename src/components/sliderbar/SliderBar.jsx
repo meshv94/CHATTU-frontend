@@ -12,7 +12,7 @@ export const SliderBar = () => {
     // console.log("token", { jwt: localStorage.getItem("jwt") });
     try {
       let data = await fetch("https://chattu-server.onrender.com/api/users", {
-        method: "POST",
+        method: "POST", 
         headers: {
           "Content-Type": "application/json",
         },
@@ -48,16 +48,18 @@ export const SliderBar = () => {
   }, []);
   return (
     <>
-      <div className="drawer lg:drawer-open w-full lg:w-fit bg-base-100 h-fit">
+      <div className="drawer lg:drawer-open w-full lg:w-fit bg-gray-900 h-fit">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        
+          <h1 className="p-5 self-center text-xl font-bold text-white">ChatApp</h1>
         <div className="drawer-content flex flex-col z-20 navbar">
           {/* Page content here */}
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-active drawer-button lg:hidden rounded-none place-self-end bg-base-100"
-          >
+            className="btn btn-active drawer-button lg:hidden rounded-none place-self-end bg-gray-100"
+            > 
             <img
-              src="https://cdn-icons-png.flaticon.com/128/10890/10890008.png"
+              src="https://cdn-icons-png.flaticon.com/128/5358/5358649.png"
               width={30}
             />
           </label>
@@ -68,14 +70,14 @@ export const SliderBar = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-100 min-h-full bg-base-200 text-base-content">
+          <ul className="menu p-4 w-100 min-h-full bg-gray-900 text-base-content">
             {/* <SearchBar /> */}
 
             {/* searchbar code */}
-            <label className="input input-bordered flex items-center gap-2 mb-4">
+            <label className="input input-bordered flex items-center gap-2 mb-4 bg-white">
               <input
                 type="text"
-                className="grow"
+                className="grow "
                 placeholder="Search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value.toLowerCase())}
@@ -107,7 +109,7 @@ export const SliderBar = () => {
               })}
             <li>
               <button
-                className="btn btn-active h-20 flex flex-row p-1 mt-3 hover:bg-sky-500"
+                className="btn btn-active h-20 flex flex-row p-1 mt-3 bg-gray-900 hover:bg-sky-500"
                 onClick={logout}
               >
                 <img

@@ -16,8 +16,10 @@ export const MessageComponent = () => {
       {selectedConversation ? (
         <div className="flex flex-col w-full h-full">
           <HeadBar user={selectedConversation} />
-          <Messages />
-          <MesageInput />
+          <Messages className="flex-grow" />
+          <div className="mt-auto">
+            <MesageInput />
+          </div>
         </div>
       ) : (
         <NoChatSelected />

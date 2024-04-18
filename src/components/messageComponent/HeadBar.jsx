@@ -4,7 +4,7 @@ export const HeadBar = (selectedConversation) => {
   // console.log("head", selectedConversation);
   return (
     <>
-      <div className="navbar bg-base-100 z-10">
+      {/* <div className="navbar bg-base-100 z-10">
         <div className="w-11 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
@@ -16,16 +16,20 @@ export const HeadBar = (selectedConversation) => {
             {selectedConversation.user.username}
           </p>
         </div>
-        {/* <div className="flex-none gap-2">
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-24 md:w-60"
-            />
-          </div>
-        </div> */}
-      </div>
+      </div> */}
+      <div className="navbar bg-sky-500 text-white flex items-center justify-between px-4 py-2 shadow-md">
+  <div className="flex items-center">
+    <div className="w-10 h-10 rounded-full overflow-hidden">
+      <img
+        alt="User Avatar"
+        src={selectedConversation.user.avatar}
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <p className="text-lg ml-3 font-semibold">{selectedConversation.user.username}</p>
+  </div>
+</div>
+
     </>
   );
 };

@@ -42,23 +42,28 @@ export const MesageInput = () => {
   };
   return (
     <>
-      <div className="z-10 w-full lg:w-4/5 mb-1 fixed bottom-0 right-0">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Type here"
-            className="input input-bordered w-4/5 rounded-none"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
-          <button
-            type="submit"
-            className="btn btn-info w-1/5 rounded-none"
-          >
-            Send
-          </button>
-        </form>
-      </div>
+      <div className="z-10 w-full mb-1 p-1 rounded-lg flex items-center">
+  <form onSubmit={handleSubmit} className="flex items-center w-full">
+    <input
+      type="text"
+      placeholder="Type here"
+      className="input input-bordered w-4/5 rounded-l-lg focus:outline-none px-2 py-1 bg-gray-900 text-white"
+      value={text}
+      onChange={(e) => setText(e.target.value)}
+    />
+    <button
+      type="submit"
+      className="btn mb-0 bg-transparent w-1/5 rounded-r-lg flex items-center justify-center hover:bg-sky-500"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/9187/9187575.png"
+        alt="Send"
+        width={40}
+      />
+    </button>
+  </form>
+</div>
+
     </>
   );
 };

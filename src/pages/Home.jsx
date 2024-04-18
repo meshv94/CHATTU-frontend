@@ -11,13 +11,22 @@ export const Home = () => {
   useEffect(() => {
     // connectSocket(user)
   }, []);
-  
+
   return (
-    <>     
-      <div className="flex flex-col lg:flex-row justify-between w-full h-full">
+    <>
+      {/* <div className="flex flex-col lg:flex-row justify-between w-full h-full shadow-lg">
           <SliderBar />
           <MessageComponent />
+      </div> */}
+      <div className="flex flex-col lg:flex-row justify-between w-full h-full shadow-lg">
+        <div className="rounded-lg">
+          <SliderBar />
+        </div>
+        <div className="flex-grow overflow-hidden">
+          <MessageComponent />
+        </div>
       </div>
+
     </>
   );
 };

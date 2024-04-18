@@ -15,20 +15,18 @@ export const Messages = (selectedConversation) => {
   }, [messages]);
   return (
     <>
-      <div className="overflow-auto mb-20 mt-2 px-2">
+      <div className="overflow-auto mt-2 px-2">
         {!loading &&
           messages.length > 0 &&
-          messages.map((item) => {            
-            return (
-              <div key={item._id} ref={lastMessage}>
-                <Message message={item} />
-              </div>
-              )
-          })}
+          messages.map((item) => (
+            <div key={item._id} ref={lastMessage}>
+              <Message message={item} />
+            </div>
+          ))}
         {!loading && messages.length === 0 && (
-          <p className="text-center text-base text-yellow-600 bg-base-100 rounded-md p-1">
-            Send a message to start the conversation. messages are safe with us.
-            no one outside of this chat, not even chatAPP can read to them.
+          <p className="text-center text-base text-yellow-600 bg-gray-900 rounded-md p-4">
+            Send a message to start the conversation. Messages are safe with us.
+            No one outside of this chat, not even ChatApp, can read them.
           </p>
         )}
       </div>
