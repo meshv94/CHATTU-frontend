@@ -51,7 +51,7 @@ export const SliderBar = () => {
       <div className="drawer lg:drawer-open w-full lg:w-fit bg-gray-900 h-fit">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         
-          <h1 className="p-5 self-center text-xl font-bold text-white">ChatApp</h1>
+          <h1 className="p-5 self-center text-xl font-bold text-white lg:hidden">ChatApp</h1>
         <div className="drawer-content flex flex-col z-20 navbar">
           {/* Page content here */}
           <label
